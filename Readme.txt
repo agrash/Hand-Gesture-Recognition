@@ -13,3 +13,6 @@ Steps for running the code:
 Precautions:
 Your webcam should not be tilted
 Background should not be the same colour as your hand
+
+Demo Video:
+https://youtu.be/q5u0VbIqvhg

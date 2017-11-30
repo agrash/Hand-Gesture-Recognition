@@ -1,0 +1,32 @@
+### Hand Gesture Recognition using opencv in python ###
+### Project for Computer Vision(SemI 2017) at IITD ###
+
+Crude explanation of the steps for gesture recognition:
+1) Detect the hand from the background.
+2) Getting the points that are between your fingers
+3) Determining gestures by using the movement and number of points detected in step 2
+
+Detailed explanation of steps:
+1) Detect the hand from the background.
+
+i) The entire process is used by using hsv format for image because it gives better results.
+ii) Detect the range of skin colour of the user
+iii) Apply a gaussian blur on the image to make it smooth
+iv) Apply the filter using values acquired in step ii
+v) Convert the image into a binary grayscale image
+v) Take a gaussian blur on the image
+vi) Take a 2D filter on the image
+vii) Convert the image into a binary image
+
+2) Getting the points that are between your fingers
+
+i) Get the maximum contour in the image that is in a pre-specified window in the image.
+ii) Fit a polygon on the contour
+iii) Get the defect points (points of contour that are not in polygon)
+iv) Remove the noisy defect points (points which make an angle greater than 90 deg)
+
+3) Determining gestures by using the movement and number of points detected in step 2
+
+i) Tracking the point movement will give us the motion of hand
+ii) Getting the number of points will give the number of fingers shown by the user
+iii) For removing noise from the gestures acquired we put a constraint on the points that if the gesture is the same for two frames.
